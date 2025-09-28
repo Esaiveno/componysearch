@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <title>企业基本面调查系统</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>企业基本面调查系统</h1>
+            <button class="add-btn" id="addCompanyBtn">+ 添加公司</button>
+        </header>
+        
+        <main class="main-content">
+            <div class="toolbar" id="toolbar">
+                <!-- 分类Tab栏区域 -->
+            <div class="category-tabs-container">
+                <div class="category-search-box">
+                    <input type="text" id="categorySearchInput" placeholder="搜索分类...">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <div class="category-tabs-wrapper">
+                    <div class="category-tabs-grid" id="categoryTabsGrid">
+                        <div class="category-tab active" data-category="">全部</div>
+                        <div class="category-tab" data-category="半导体">半导体</div>
+                        <div class="category-tab" data-category="AI">AI</div>
+                        <div class="category-tab" data-category="机器人">机器人</div>
+                        <div class="category-tab" data-category="生物医药">生物医药</div>
+                        <div class="category-tab" data-category="医疗器械">医疗器械</div>
+                        
+                        <!-- 隐藏的分类 -->
+                        <div class="category-tab hidden-tab" data-category="新能源">新能源</div>
+                        <div class="category-tab hidden-tab" data-category="智能传感器">智能传感器</div>
+                        <div class="category-tab hidden-tab" data-category="高端装备与仪器">高端装备</div>
+                        <div class="category-tab hidden-tab" data-category="高性能材料">高性能材料</div>
+                        <div class="category-tab hidden-tab" data-category="软件与信息">软件信息</div>
+                        <div class="category-tab hidden-tab" data-category="智能终端">智能终端</div>
+                        <div class="category-tab hidden-tab" data-category="网络通信">网络通信</div>
+                        <div class="category-tab hidden-tab" data-category="低空经济">低空经济</div>
+                        <div class="category-tab hidden-tab" data-category="卫星">卫星</div>
+                        <div class="category-tab hidden-tab" data-category="数字创意">数字创意</div>
+                        <div class="category-tab hidden-tab" data-category="现代时尚">现代时尚</div>
+                        <div class="category-tab hidden-tab" data-category="安全节能环保">节能环保</div>
+                        <div class="category-tab hidden-tab" data-category="量子信息">量子信息</div>
+                        <div class="category-tab hidden-tab" data-category="新消费">新消费</div>
+                        <div class="category-tab hidden-tab" data-category="其他">其他</div>
+                    </div>
+                    <button class="expand-btn" id="expandBtn">
+                        <span class="expand-text">展开更多</span>
+                        <span class="expand-icon">▼</span>
+                    </button>
+                </div>
+            </div>
+                
+                <!-- 工具栏 -->
+                <div class="toolbar-controls">
+                    <div class="toolbar-group">
+                        <label for="filterLevel">分类：</label>
+                        <select id="filterLevel">
+                            <option value="all">全部</option>
+                            <option value="值得投资">值得投资</option>
+                            <option value="谨慎投资">谨慎投资</option>
+                            <option value="高风险">高风险</option>
+                            <option value="不建议投资">不建议投资</option>
+                        </select>
+                    </div>
+                    <div class="toolbar-group">
+                        <label for="sortOrder">排序：</label>
+                        <select id="sortOrder">
+                            <option value="desc">分数从高到低</option>
+                            <option value="asc">分数从低到高</option>
+                        </select>
+                    </div>
+                    <div class="toolbar-search">
+                        <input type="text" id="searchInput" placeholder="搜索公司名称/业务/评级..." />
+                    </div>
+                </div>
+            </div>
+            <div class="company-list" id="companyList">
+                <!-- 公司卡片将在这里动态生成 -->
+            </div>
+        </main>
+    </div>
+
+    <!-- 添加公司模态框 -->
+    <div class="modal" id="addModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>添加公司信息</h2>
+                <span class="close" id="closeModal">&times;</span>
+            </div>
+            <form class="modal-form" id="companyForm">
+                <div class="form-group">
+                    <label for="companyName">公司名称：</label>
+                    <input type="text" id="companyName" name="companyName" required>
+                </div>
+                <div class="form-group">
+                    <label for="mainBusiness">主要板块与业务：</label>
+                    <textarea id="mainBusiness" name="mainBusiness" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="investmentScore">投资评分（0-100分）：</label>
+                    <input type="number" id="investmentScore" name="investmentScore" min="0" max="100" step="1" required>
+                    <div class="score-hint">
+                        <small>评分区间：0-25分(不建议投资) | 26-50分(高风险) | 51-75分(谨慎投资) | 76-100分(值得投资)</small>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" id="cancelBtn">取消</button>
+                    <button type="submit" class="submit-btn">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 公司详情模态框 -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content detail-modal">
+            <div class="modal-header">
+                <h2 id="detailTitle">公司详情</h2>
+                <span class="close" id="closeDetail">&times;</span>
+            </div>
+            <div class="detail-body">
+                <!-- 公司基本信息 -->
+                <div class="detail-section">
+                    <h3>基本信息</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">公司名称</span>
+                            <span class="info-value" id="detailCompanyName">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">投资评分</span>
+                            <span class="info-value score" id="detailInvestmentScore">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">投资等级</span>
+                            <span class="info-value level" id="detailInvestmentLevel">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">创建时间</span>
+                            <span class="info-value" id="detailCreatedAt">-</span>
+                        </div>
+                        <div class="info-item full-width">
+                            <span class="info-label">主要业务</span>
+                            <span class="info-value" id="detailBusiness">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 风险评估 -->
+                <div class="detail-section">
+                    <h3>风险评估</h3>
+                    <div class="risk-assessment">
+                        <div class="risk-level" id="detailRiskLevel">
+                            <span class="risk-indicator"></span>
+                            <div class="risk-content">
+                                <div class="risk-title" id="detailRiskTitle">风险等级</div>
+                                <div class="risk-description" id="detailRiskDescription">风险描述</div>
+                            </div>
+                        </div>
+                        <div class="investment-suggestion" id="detailInvestmentSuggestion">
+                            投资建议将在这里显示
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <div class="section-header">
+                        <h3>利好消息</h3>
+                        <button class="edit-section-btn" id="editFavorableBtn" title="编辑利好消息">
+                            <span class="edit-icon">✏️</span>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        <ul id="detailFavorableList" class="detail-list"></ul>
+                        <div id="detailFavorableEmpty" class="empty-note">暂无数据</div>
+                        <div id="detailFavorableEdit" class="edit-area" style="display: none;">
+                            <textarea id="favorableTextarea" placeholder="请输入利好消息，每行一条"></textarea>
+                            <div class="edit-buttons">
+                                <button class="save-btn" id="saveFavorableBtn">保存</button>
+                                <button class="cancel-btn" id="cancelFavorableBtn">取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-section">
+                    <div class="section-header">
+                        <h3>年度营收</h3>
+                        <button class="edit-section-btn" id="editRevenueBtn" title="编辑年度营收">
+                            <span class="edit-icon">✏️</span>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        <div id="detailRevenueChart" class="chart-container small"></div>
+                        <div id="detailRevenueEmpty" class="empty-note">暂无数据</div>
+                        <div id="detailRevenueEdit" class="edit-area" style="display: none;">
+                            <div class="revenue-input-grid">
+                                <div class="revenue-input-item">
+                                    <label>2021年营收 (万元)</label>
+                                    <input type="number" id="revenue2021" placeholder="请输入2021年营收">
+                                </div>
+                                <div class="revenue-input-item">
+                                    <label>2022年营收 (万元)</label>
+                                    <input type="number" id="revenue2022" placeholder="请输入2022年营收">
+                                </div>
+                                <div class="revenue-input-item">
+                                    <label>2023年营收 (万元)</label>
+                                    <input type="number" id="revenue2023" placeholder="请输入2023年营收">
+                                </div>
+                                <div class="revenue-input-item">
+                                    <label>2024年营收 (万元)</label>
+                                    <input type="number" id="revenue2024" placeholder="请输入2024年营收">
+                                </div>
+                            </div>
+                            <div class="edit-buttons">
+                                <button class="save-btn" id="saveRevenueBtn">保存</button>
+                                <button class="cancel-btn" id="cancelRevenueBtn">取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-section">
+                    <div class="section-header">
+                        <h3>其他信息</h3>
+                        <button class="edit-section-btn" id="editOtherBtn" title="编辑其他信息">
+                            <span class="edit-icon">✏️</span>
+                        </button>
+                    </div>
+                    <div class="section-content">
+                        <div id="detailOther"></div>
+                        <div id="detailOtherEdit" class="edit-area" style="display: none;">
+                            <textarea id="otherTextarea" placeholder="请输入其他信息"></textarea>
+                            <div class="edit-buttons">
+                                <button class="save-btn" id="saveOtherBtn">保存</button>
+                                <button class="cancel-btn" id="cancelOtherBtn">取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 操作区域 -->
+                <div class="detail-section">
+                    <h3>操作</h3>
+                    <div class="action-buttons">
+                        <button class="action-btn edit-btn" id="detailEditBtn">
+                            <span class="btn-icon">✏️</span>
+                            编辑公司信息
+                        </button>
+                        <button class="action-btn compare-btn" id="detailCompareBtn">
+                            <span class="btn-icon">📊</span>
+                            同行业比较
+                        </button>
+                        <button class="action-btn delete-btn" id="detailDeleteBtn">
+                            <span class="btn-icon">🗑️</span>
+                            删除公司
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 右键菜单 -->
+    <div class="context-menu" id="contextMenu">
+        <div class="context-menu-item" id="downloadChart">下载图表</div>
+        <div class="context-menu-item" id="editCompany">编辑</div>
+        <div class="context-menu-item" id="deleteCompany">删除</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

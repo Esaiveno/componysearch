@@ -1,0 +1,683 @@
+{
+  "companies": [
+    {
+      "id": "1758359891585",
+      "name": "华源智信",
+      "business": "半导体、显示驱动芯片、数字电源芯片",
+      "investmentScore": 80,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-20T09:18:11.585Z",
+      "updatedAt": "2025-09-20T09:27:29.989Z"
+    },
+    {
+      "id": "1758360065668",
+      "name": "蓝芯算力",
+      "business": "AI算力、芯片",
+      "investmentScore": 85,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-20T09:21:05.668Z",
+      "updatedAt": "2025-09-20T09:21:05.668Z"
+    },
+    {
+      "id": "1758360158412",
+      "name": "威兆半导体",
+      "business": "半导体",
+      "investmentScore": 82,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-20T09:22:38.412Z",
+      "updatedAt": "2025-09-20T09:22:38.412Z"
+    },
+    {
+      "id": "1758360400179",
+      "name": "偲百创",
+      "business": "射频、移动通信",
+      "investmentScore": 88,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-20T09:26:40.179Z",
+      "updatedAt": "2025-09-20T09:28:53.907Z"
+    },
+    {
+      "id": "1758360523035",
+      "name": "迈塔兰斯",
+      "business": "半导体",
+      "investmentScore": 84,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-20T09:28:43.035Z",
+      "updatedAt": "2025-09-20T09:35:12.434Z"
+    },
+    {
+      "id": "1758360775723",
+      "name": "中微半导体设备（上海）（688012.SH）",
+      "business": "半导体",
+      "investmentScore": 90,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-20T09:32:55.723Z",
+      "updatedAt": "2025-09-20T09:33:36.124Z"
+    },
+    {
+      "id": "1758360794419",
+      "name": "中微半导体（深圳）（688380.SH）",
+      "business": "半导体",
+      "investmentScore": 65,
+      "investmentLevel": "谨慎投资",
+      "createdAt": "2025-09-20T09:33:14.419Z",
+      "updatedAt": "2025-09-20T09:35:25.002Z"
+    },
+    {
+      "id": "1758360969168",
+      "name": "欧冶半导体",
+      "business": "半导体",
+      "investmentScore": 85,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-20T09:36:09.168Z",
+      "updatedAt": "2025-09-20T09:36:09.168Z"
+    },
+    {
+      "id": "1758361084715",
+      "name": "芯网动力",
+      "business": "集成电路",
+      "investmentScore": 35,
+      "investmentLevel": "高风险",
+      "createdAt": "2025-09-20T09:38:04.715Z",
+      "updatedAt": "2025-09-20T09:38:04.715Z"
+    },
+    {
+      "id": "1758361148611",
+      "name": "巨风半导体",
+      "business": "半导体",
+      "investmentScore": 35,
+      "investmentLevel": "高风险",
+      "createdAt": "2025-09-20T09:39:08.611Z",
+      "updatedAt": "2025-09-20T09:39:08.611Z"
+    },
+    {
+      "id": "1758361243514",
+      "name": "瑞沃微",
+      "business": "芯片、消费电子",
+      "investmentScore": 75,
+      "investmentLevel": "谨慎投资",
+      "createdAt": "2025-09-20T09:40:43.514Z",
+      "updatedAt": "2025-09-20T09:40:43.514Z"
+    },
+    {
+      "id": "1758361360603",
+      "name": "追梦每刻",
+      "business": "AI应用",
+      "investmentScore": 78,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-20T09:42:40.603Z",
+      "updatedAt": "2025-09-20T09:42:40.603Z"
+    },
+    {
+      "id": "1758361554156",
+      "name": "Weitu AI",
+      "business": "AI",
+      "investmentScore": 70,
+      "investmentLevel": "谨慎投资",
+      "createdAt": "2025-09-20T09:45:54.156Z",
+      "updatedAt": "2025-09-20T09:45:54.156Z"
+    },
+    {
+      "id": "1758361604738",
+      "name": "生境科技",
+      "business": "AI",
+      "investmentScore": 75,
+      "investmentLevel": "谨慎投资",
+      "createdAt": "2025-09-20T09:46:44.738Z",
+      "updatedAt": "2025-09-20T09:46:44.738Z"
+    },
+    {
+      "id": "1758361719826",
+      "name": "智辰半导体",
+      "business": "AI芯片",
+      "investmentScore": 72,
+      "investmentLevel": "谨慎投资",
+      "createdAt": "2025-09-20T09:48:39.826Z",
+      "updatedAt": "2025-09-20T09:48:39.826Z"
+    },
+    {
+      "id": "1758361797315",
+      "name": "兔展智能",
+      "business": "AI大模型",
+      "investmentScore": 82,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-20T09:49:57.315Z",
+      "updatedAt": "2025-09-22T03:10:27.071Z"
+    },
+    {
+      "id": "1758361883642",
+      "name": "沃兰特",
+      "business": "低空经济",
+      "investmentScore": 78,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-20T09:51:23.642Z",
+      "updatedAt": "2025-09-20T09:51:23.642Z"
+    },
+    {
+      "id": "1758509468529",
+      "name": "边界智控",
+      "business": "低空经济",
+      "investmentScore": 80,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T02:51:08.529Z",
+      "updatedAt": "2025-09-22T02:51:08.529Z"
+    },
+    {
+      "id": "1758509632186",
+      "name": "微联星智",
+      "business": "卫星",
+      "investmentScore": 95,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T02:53:52.186Z",
+      "updatedAt": "2025-09-23T00:42:50.842Z",
+      "other": "发展前景：微联星智是国内商业航天领域的领军企业，在卫星通信载荷和卫星测控数传产品领域表现卓越，产品交付量稳居民营企业榜首，是国网 GW 星座测控通信产品的唯一民营供应商。2025 年 3 月，其卫星核心部组件制造基地项目签约落地杭州湾上虞经开区，项目总投资 32 亿元，计划分三期实施，整体达产后，可形成年产 36 万台（套）卫星核心部组件的生产能力，预计实现年产值 135 亿元、税收 11 亿元，未来发展潜力巨大。\n发展背景：卫星通信产业对我国军事国防、自然灾害、科学考察、航空宽带等业务具有重大的战略意义，是一个极具发展潜力的赛道。随着全球卫星物联网设备数量的不断增加，以及卫星通信行业总理论容量的持续扩大，微联星智作为国内首批专注工业批量化卫星通信与网络的创新型企业，迎来了良好的发展机遇。\n独特技术：在卫星测控通信方面，其子公司斯北图科技有限公司开发了包括测控应答机、测控数传一体机、宽带通信机、星间通信机、星间组网时间同步单元等在内的多样化模块化组件，覆盖了从卫星模组件与通信载荷系统制造，到地面通信基带设备与通信终端制造的天地一站式系统建设。在卫星物联网方面，微联星智利用卫星物联网基站采集森林、集装箱、货车、气象站等数据站的信息，在地面与互联网应用之间实现数据的双向传输，拓展了应用场景。"
+    },
+    {
+      "id": "1758509883295",
+      "name": "清研电子",
+      "business": "新能源",
+      "investmentScore": 85,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T02:58:03.295Z",
+      "updatedAt": "2025-09-22T02:58:03.295Z"
+    },
+    {
+      "id": "1758509982903",
+      "name": "智安新能源",
+      "business": "新能源",
+      "investmentScore": 85,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T02:59:42.903Z",
+      "updatedAt": "2025-09-22T02:59:42.903Z"
+    },
+    {
+      "id": "1758510040047",
+      "name": "轻橙时代",
+      "business": "互联网汽车",
+      "investmentScore": 55,
+      "investmentLevel": "谨慎投资",
+      "createdAt": "2025-09-22T03:00:40.047Z",
+      "updatedAt": "2025-09-22T03:00:40.047Z"
+    },
+    {
+      "id": "1758510180711",
+      "name": "恩瑞恺诺",
+      "business": "生物医药",
+      "investmentScore": 85,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:03:00.711Z",
+      "updatedAt": "2025-09-22T03:03:00.711Z"
+    },
+    {
+      "id": "1758510244152",
+      "name": "欧科健",
+      "business": "生物医药",
+      "investmentScore": 88,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:04:04.152Z",
+      "updatedAt": "2025-09-22T03:04:04.152Z"
+    },
+    {
+      "id": "1758510306736",
+      "name": "贝美药业",
+      "business": "生物医药",
+      "investmentScore": 87,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:05:06.736Z",
+      "updatedAt": "2025-09-22T03:05:06.736Z"
+    },
+    {
+      "id": "1758510597385",
+      "name": "净拓生物",
+      "business": "生物医药",
+      "investmentScore": 85,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:09:57.385Z",
+      "updatedAt": "2025-09-22T03:09:57.385Z"
+    },
+    {
+      "id": "1758510858760",
+      "name": "深圳益诺思",
+      "business": "生物医药",
+      "investmentScore": 82,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:14:18.760Z",
+      "updatedAt": "2025-09-22T03:14:18.760Z"
+    },
+    {
+      "id": "1758510931591",
+      "name": "福沃药业",
+      "business": "生物医药",
+      "investmentScore": 92,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:15:31.591Z",
+      "updatedAt": "2025-09-22T03:15:31.591Z"
+    },
+    {
+      "id": "1758511240465",
+      "name": "中科帅天",
+      "business": "生物医药",
+      "investmentScore": 90,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:20:40.465Z",
+      "updatedAt": "2025-09-22T03:20:40.465Z"
+    },
+    {
+      "id": "1758511688518",
+      "name": "核心医疗",
+      "business": "医疗器械",
+      "investmentScore": 85,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:28:08.518Z",
+      "updatedAt": "2025-09-22T03:28:08.518Z"
+    },
+    {
+      "id": "1758511835023",
+      "name": " 征鸿诺瓦",
+      "business": "医疗器械",
+      "investmentScore": 86,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:30:35.023Z",
+      "updatedAt": "2025-09-22T03:30:35.023Z"
+    },
+    {
+      "id": "1758511886671",
+      "name": "腾云医疗",
+      "business": "医疗器械",
+      "investmentScore": 75,
+      "investmentLevel": "谨慎投资",
+      "createdAt": "2025-09-22T03:31:26.671Z",
+      "updatedAt": "2025-09-22T03:31:26.671Z"
+    },
+    {
+      "id": "1758511999912",
+      "name": "栅极芯致",
+      "business": "医疗器械",
+      "investmentScore": 85,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:33:19.912Z",
+      "updatedAt": "2025-09-22T03:33:19.912Z"
+    },
+    {
+      "id": "1758512096096",
+      "name": "津渡生科",
+      "business": "医疗器械",
+      "investmentScore": 88,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:34:56.096Z",
+      "updatedAt": "2025-09-22T03:34:56.096Z"
+    },
+    {
+      "id": "1758512150604",
+      "name": "中兴通讯",
+      "business": "网络通信",
+      "investmentScore": 89,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:35:50.604Z",
+      "updatedAt": "2025-09-22T03:35:50.604Z"
+    },
+    {
+      "id": "1758512669189",
+      "name": "即行智能",
+      "business": "智能终端",
+      "investmentScore": 78,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:44:29.189Z",
+      "updatedAt": "2025-09-22T03:44:29.189Z"
+    },
+    {
+      "id": "1758512817646",
+      "name": "轻量智造",
+      "business": "智能终端",
+      "investmentScore": 82,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:46:57.646Z",
+      "updatedAt": "2025-09-22T03:46:57.646Z"
+    },
+    {
+      "id": "1758512898388",
+      "name": "云泊软件",
+      "business": "软件与信息服",
+      "investmentScore": 92,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:48:18.388Z",
+      "updatedAt": "2025-09-22T03:48:18.388Z"
+    },
+    {
+      "id": "1758513003617",
+      "name": "众安信科",
+      "business": "软件与信息",
+      "investmentScore": 87,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:50:03.617Z",
+      "updatedAt": "2025-09-22T03:50:03.617Z"
+    },
+    {
+      "id": "1758513061741",
+      "name": "北斗智能",
+      "business": "软件与信息",
+      "investmentScore": 90,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:51:01.741Z",
+      "updatedAt": "2025-09-22T03:51:01.741Z"
+    },
+    {
+      "id": "1758513121142",
+      "name": "聆海智能",
+      "business": "软件与信息",
+      "investmentScore": 76,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:52:01.142Z",
+      "updatedAt": "2025-09-22T03:52:01.142Z"
+    },
+    {
+      "id": "1758513169534",
+      "name": "速腾聚创",
+      "business": "智能传感器",
+      "investmentScore": 91,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:52:49.534Z",
+      "updatedAt": "2025-09-22T03:53:08.278Z"
+    },
+    {
+      "id": "1758513212302",
+      "name": "瑞识科技",
+      "business": "智能传感器",
+      "investmentScore": 85,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:53:32.302Z",
+      "updatedAt": "2025-09-22T03:53:32.303Z"
+    },
+    {
+      "id": "1758513265815",
+      "name": "北极芯微",
+      "business": "智能传感器",
+      "investmentScore": 88,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:54:25.815Z",
+      "updatedAt": "2025-09-22T03:54:25.815Z"
+    },
+    {
+      "id": "1758513345569",
+      "name": "安思疆",
+      "business": "智能传感器",
+      "investmentScore": 83,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T03:55:45.569Z",
+      "updatedAt": "2025-09-22T03:55:45.569Z"
+    },
+    {
+      "id": "1758521384002",
+      "name": "君柔科技",
+      "business": "智能传感器",
+      "investmentScore": 80,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:09:44.002Z",
+      "updatedAt": "2025-09-22T06:09:44.002Z"
+    },
+    {
+      "id": "1758521490446",
+      "name": "海塞姆",
+      "business": "高端装备与仪器",
+      "investmentScore": 89,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:11:30.446Z",
+      "updatedAt": "2025-09-22T06:11:30.446Z"
+    },
+    {
+      "id": "1758521524466",
+      "name": "普乐精仪",
+      "business": "高端装备与仪器",
+      "investmentScore": 86,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:12:04.466Z",
+      "updatedAt": "2025-09-22T06:12:04.466Z"
+    },
+    {
+      "id": "1758521652369",
+      "name": "超维传感",
+      "business": "机器人",
+      "investmentScore": 84,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:14:12.369Z",
+      "updatedAt": "2025-09-22T06:14:12.369Z"
+    },
+    {
+      "id": "1758521781817",
+      "name": "陶世智能",
+      "business": "机器人",
+      "investmentScore": 92,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:16:21.817Z",
+      "updatedAt": "2025-09-22T06:16:21.817Z"
+    },
+    {
+      "id": "1758521852656",
+      "name": "跨维智能",
+      "business": "机器人",
+      "investmentScore": 97,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:17:32.656Z",
+      "updatedAt": "2025-09-22T10:00:11.969Z",
+      "other": "跨维（深圳）智能数字科技有限公司是一家以 Sim2Real 为核心，研发高通用性具身智能技术的国家高新技术企业。以下是其详细情况：\n基本信息：公司成立于 2021 年 6 月 15 日，注册地址为深圳市南山区粤海街道滨海社区海天一路 19、17、18 号深圳市软件产业基地 4 栋 511，法定代表人是贾俊。公司注册资本约为 155.79 万元，股东包括贾奎、跨维（深圳）投资合伙企业（有限合伙）、深圳市松禾天使创业投资合伙企业（有限合伙）等。\n团队实力：公司核心团队汇聚了来自人工智能 / 大模型、机器人、传感器、物理引擎等领域的顶尖专家，拥有深厚的技术积累与丰富的行业经验。\n技术实力：跨维智能提出 “Engine-driven Sim2Real VLA” 的前瞻性理念，构建了基于物理引擎的仿真到现实（Sim2Real）技术体系，为机器人搭建 “场景技能训练场”，将机器人研发周期缩短了 90%。其核心产品 PickWiz 及 X-Wiz 具身大脑搭载了先进的多模态感知系统，能够对周围环境进行毫秒级的实时感知与解析。\n产品矩阵：公司打造了软硬一体的产品矩阵，包含 DexVerse™具身智能引擎、基于 3D VLA（3D Vision Language Action）大模型的成像感知套件等产品。其中，DexCore 系统使通用机器人具备感知目标物体和环境以及分解规划任务和引导机器人运动的能力；DexSense 系列产品是跨维智能自主研发的超高精度 3D 智能相机，包括 Kingfisher、Xema&Finch 和 Sparrow 系列；DexAgent 是基于 DexVerse™引擎构建的通用具身智能机器人，适用于科研教育、3C 电子、汽车、装配、物流等领域的灵活应用。\n应用场景：公司的产品和技术已在汽车零部件、新能源、3C 电子、航空航天、物流、家电、化工、医疗、教育等 50 + 细分行业实现通用级别落地，覆盖头部车厂、新能源电池厂商、新锐潮玩、果链厂商、化工巨头、航天集团等知名终端客户。\n融资情况：2025 年 7 月，跨维智能完成数亿元 A1&A2 轮融资，投资机构包括领投方成都科创投、洪泰基金，及天鹰资本、四川院士基金、南山战新投、一村淞灵、探元创投等知名机构，老股东联想创投等持续加码。",
+      "favorableNews": [
+        "与腾讯云达成战略合作：2025 年 9 月 16 日，在 2025 腾讯全球数字生态大会期间，跨维智能与腾讯云正式达成战略合作。双方以生成式世界模型为关键技术支撑，深度融合腾讯云智能算力与跨维具身智能技术，构建 “虚拟训练场加速真实应用” 的创新范式，旨在为商业服务、教育科研、智能制造等场景提供可规模化落地的解决方案。",
+        "完成数亿元 A1&A2 轮融资：2025 年 7 月，跨维智能宣布完成数亿元 A1&A2 轮融资，投资机构包括领投方成都科创投、洪泰基金，及天鹰资本、四川院士基金、南山战新投等知名机构，老股东联想创投等持续加码。"
+      ],
+      "revenue": {
+        "2021": 100,
+        "2022": 300,
+        "2023": 2000,
+        "2024": 3800
+      }
+    },
+    {
+      "id": "1758521877624",
+      "name": "肯綮科技",
+      "business": "机器人",
+      "investmentScore": 93,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:17:57.624Z",
+      "updatedAt": "2025-09-22T06:17:57.624Z"
+    },
+    {
+      "id": "1758521894248",
+      "name": "智平方",
+      "business": "机器人",
+      "investmentScore": 86,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:18:14.248Z",
+      "updatedAt": "2025-09-22T09:56:54.633Z",
+      "other": "基本信息：公司法定代表人为郭彦东，注册资本 134.5388 万人民币，总部位于深圳市南山区桃源街道福光社区留仙大道 3370 号南山智园崇文园区 1 号楼 1904。公司专注于智能机器人研发，主营业务涵盖人工智能系统集成、数据处理服务及智能机器人销售，拥有商标 17 条、专利 10 条和著作权 6 条，对外投资 6 家企业。\n技术实力：智平方是国内领先的具身智能机器人企业，是国内唯一专注空间智能基础模型研发并获得国家认可的团队。其端到端具身大模型 AI2R Brain 在开源精度、泛化任务成功率及端侧运行速度等方面全球领先。公司推出的 Alpha Bot 系列通用智能机器人，搭载自研具身大模型 AI2R Brain，具备卓越的空间智能与学习能力，可适应多样化场景需求。\n融资情况：2025 年，智平方完成了由深创投领投的新一轮 A 系列融资，深创投单家投资超过亿元。此外，公司还先后获得国中资本领投的 Pre-A+++ 轮、普华资本领投的 A + 轮融资，引入达晨财智、基石资本、南山战新投等机构投资，半年内完成了 7 轮数亿级融资。\n业务布局：智平方坚持以 “半结构化场景” 走向 “非结构化场景” 的商业化场景布局思路，已在汽车制造、半导体、生物科技和公共服务等领域展开落地。其主打的通用智能机器人 “爱宝”，已进入多个真实一线场景，如在国内外头部车企的工厂承担上下料等任务，在华熙生物的无菌车间执行智能转运等任务，在晶能微电子的半导体生产线负责物料分拣等任务。",
+      "favorableNews": [
+        "获得近 5 亿元千台机器人订单：2025 年 9 月 11 日，智平方与惠科股份有限公司的全资子公司深圳慧智物联达成战略合作，未来三年内，智平方将向惠科全球生产基地部署逾 1000 台具身智能机器人，订单金额接近 5 亿元。这标志着具身智能机器人首次大规模进入半导体显示产业，覆盖从仓储物流、上下物料、零部件装配到质检测试等全流程。",
+        "完成新一轮 A 系列融资：智平方近期完成了由深创投领投的新一轮 A 系列融资，深创投单家投资超过亿元。本轮不仅有老股东敦鸿资产、国投的持续加码，还吸引了华熙生物和一家大型零售企业以产业资本的身份参与。融资资金将用于智平方 GOVLA 大模型及 AlphaBot 系列机器人的持续迭代、自建产线扩容与全球市场拓展。"
+      ]
+    },
+    {
+      "id": "1758521908776",
+      "name": "自变量",
+      "business": "机器人",
+      "investmentScore": 91,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:18:28.776Z",
+      "updatedAt": "2025-09-22T06:18:28.776Z"
+    },
+    {
+      "id": "1758523117831",
+      "name": "帕西尼",
+      "business": "机器人",
+      "investmentScore": 99,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:38:37.831Z",
+      "updatedAt": "2025-09-22T09:50:10.261Z",
+      "favorableNews": [
+        "获得京东战略投资：帕西尼完成了由京东战略领投的新一轮融资，4 个月融资规模达 10 亿元。京东的入股不仅为公司提供了资金支持，还有望在技术研发、市场拓展等方面带来更多资源和合作机会。",
+        "在世界机器人大会上首发新品：2025 年 8 月 8 日至 12 日，在世界机器人大会上，帕西尼全球首发了其第三代多维触觉产品矩阵，包括多维触觉传感器 PX-6AX-GEN3、协作型多维触觉自适应灵巧手 GMH18、轻量化多维触觉人形机器人 TORA DOUBLE ONE。这些新品兼具高性价比与高性能，为具身智能体提供了一站式感知与泛化解决方案，提升了公司的品牌影响力和技术竞争力。",
+        "人形机器人应用场景拓展：帕西尼的人形机器人 TORA-ONE 与深圳市地铁集团展开试点合作，应用于地铁安检场景。这是国内首次人形机器人从实验室到地铁安检真实场景的突破性跨越，显示出其机器人在实际应用中的可行性和潜力，也为公司开拓了新的市场领域。"
+      ],
+      "revenue": {
+        "2021": 0,
+        "2022": 0,
+        "2023": 0,
+        "2024": 20000
+      }
+    },
+    {
+      "id": "1758523241028",
+      "name": "逐际动力",
+      "business": "机器人",
+      "investmentScore": 93,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:40:41.028Z",
+      "updatedAt": "2025-09-22T06:40:41.028Z"
+    },
+    {
+      "id": "1758523277635",
+      "name": "云鲸智能",
+      "business": "机器人",
+      "investmentScore": 88,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:41:17.635Z",
+      "updatedAt": "2025-09-22T06:41:17.635Z"
+    },
+    {
+      "id": "1758523312661",
+      "name": "越疆科技",
+      "business": "机器人",
+      "investmentScore": 95,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:41:52.661Z",
+      "updatedAt": "2025-09-22T06:41:52.661Z"
+    },
+    {
+      "id": "1758523367259",
+      "name": "一清创新",
+      "business": "机器人",
+      "investmentScore": 75,
+      "investmentLevel": "谨慎投资",
+      "createdAt": "2025-09-22T06:42:47.259Z",
+      "updatedAt": "2025-09-22T06:42:47.259Z"
+    },
+    {
+      "id": "1758523461426",
+      "name": "长盛科技",
+      "business": "高性能材料",
+      "investmentScore": 89,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:44:21.426Z",
+      "updatedAt": "2025-09-22T06:44:21.426Z"
+    },
+    {
+      "id": "1758523572868",
+      "name": "新磁超导",
+      "business": "高性能材料",
+      "investmentScore": 65,
+      "investmentLevel": "谨慎投资",
+      "createdAt": "2025-09-22T06:46:12.868Z",
+      "updatedAt": "2025-09-22T06:46:12.868Z"
+    },
+    {
+      "id": "1758523608970",
+      "name": "高性能材料",
+      "business": "高性能材料",
+      "investmentScore": 85,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:46:48.970Z",
+      "updatedAt": "2025-09-22T06:46:48.970Z"
+    },
+    {
+      "id": "1758523693345",
+      "name": "哈深智材",
+      "business": "高性能材料",
+      "investmentScore": 78,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:48:13.345Z",
+      "updatedAt": "2025-09-22T06:48:13.345Z"
+    },
+    {
+      "id": "1758523840515",
+      "name": "瑞云科技",
+      "business": "数字创意",
+      "investmentScore": 85,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:50:40.515Z",
+      "updatedAt": "2025-09-22T06:50:40.516Z"
+    },
+    {
+      "id": "1758523967934",
+      "name": "雅昌文化",
+      "business": "现代时尚",
+      "investmentScore": 79,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:52:47.934Z",
+      "updatedAt": "2025-09-22T06:52:47.934Z"
+    },
+    {
+      "id": "1758524052602",
+      "name": "赛富能",
+      "business": "安全节能环保",
+      "investmentScore": 75,
+      "investmentLevel": "谨慎投资",
+      "createdAt": "2025-09-22T06:54:12.602Z",
+      "updatedAt": "2025-09-22T06:54:12.602Z"
+    },
+    {
+      "id": "1758524107760",
+      "name": "潜行创新",
+      "business": "海洋、机器人",
+      "investmentScore": 78,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:55:07.760Z",
+      "updatedAt": "2025-09-22T06:55:07.760Z"
+    },
+    {
+      "id": "1758524200843",
+      "name": "正奇创新",
+      "business": "新消费",
+      "investmentScore": 76,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:56:40.843Z",
+      "updatedAt": "2025-09-22T06:56:40.843Z"
+    },
+    {
+      "id": "1758524225963",
+      "name": "玻色量子",
+      "business": "量子信息",
+      "investmentScore": 80,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:57:05.963Z",
+      "updatedAt": "2025-09-22T06:57:05.963Z"
+    },
+    {
+      "id": "1758524279044",
+      "name": "阳光保险",
+      "business": "其他",
+      "investmentScore": 80,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:57:59.044Z",
+      "updatedAt": "2025-09-22T06:57:59.044Z"
+    },
+    {
+      "id": "1758524292049",
+      "name": "众惠保险",
+      "business": "其他",
+      "investmentScore": 70,
+      "investmentLevel": "谨慎投资",
+      "createdAt": "2025-09-22T06:58:12.049Z",
+      "updatedAt": "2025-09-22T06:58:12.049Z"
+    },
+    {
+      "id": "1758524307738",
+      "name": "麦德龙",
+      "business": "其他",
+      "investmentScore": 76,
+      "investmentLevel": "值得投资",
+      "createdAt": "2025-09-22T06:58:27.738Z",
+      "updatedAt": "2025-09-22T06:58:27.738Z"
+    }
+  ],
+  "lastModified": "2025-09-23T00:42:50.843Z",
+  "version": "1.0.0",
+  "checksum": "01a13ec8da30ece831be943be3982491"
+}

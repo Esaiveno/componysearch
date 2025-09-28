@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>同行业比较 - 企业基本面调查</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .compare-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .compare-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .header-section {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        
+        .back-btn {
+            position: absolute;
+            left: 0;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-1px);
+        }
+        
+        .back-btn i {
+            font-size: 12px;
+        }
+        
+        .compare-header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        .compare-header p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .company-input-section {
+            margin-bottom: 30px;
+        }
+        
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .company-input-card {
+            background: #fff;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .company-input-card:hover {
+            border-color: #007bff;
+            box-shadow: 0 6px 12px rgba(0,123,255,0.15);
+            transform: translateY(-2px);
+        }
+        
+        .company-input-card h4 {
+            margin: 0 0 15px 0;
+            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .company-name-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+        
+        .company-name-input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+        }
+        
+        .edit-company-btn {
+            width: 100%;
+            padding: 10px 16px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .edit-company-btn:hover {
+            background: linear-gradient(135deg, #218838, #1e7e34);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(40,167,69,0.3);
+        }
+        
+        .action-center {
+            text-align: center;
+        }
+        
+        .show-comparison-btn {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        }
+        
+        .show-comparison-btn:hover {
+            background: linear-gradient(135deg, #0056b3, #004085);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .company-card {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #007bff;
+        }
+        
+        .card-header h3 {
+            margin: 0;
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .edit-metrics-btn {
+            padding: 6px 12px;
+            background: linear-gradient(135deg, #ffc107, #e0a800);
+            color: #212529;
+            border: none;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .edit-metrics-btn:hover {
+            background: linear-gradient(135deg, #e0a800, #d39e00);
+            transform: translateY(-1px);
+        }
+        
+        .metrics-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .metric-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        
+        .metric-label {
+            font-weight: 500;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .metric-input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .metric-input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0,123,255,0.1);
+        }
+        
+        .metric-input:hover {
+            border-color: #adb5bd;
+        }
+        
+        .advantages-disadvantages {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .advantage-card, .disadvantage-card {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .advantage-card {
+            border-left: 4px solid #28a745;
+        }
+        
+        .disadvantage-card {
+            border-left: 4px solid #dc3545;
+        }
+        
+        .advantage-card h4 {
+            color: #28a745;
+            margin: 0 0 15px 0;
+        }
+        
+        .disadvantage-card h4 {
+            color: #dc3545;
+            margin: 0 0 15px 0;
+        }
+        
+        .point-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .point-list li {
+            padding: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .advantage-card .point-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .disadvantage-card .point-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #dc3545;
+            font-weight: bold;
+        }
+        
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .back-button:hover {
+            background: #0056b3;
+        }
+        
+        .edit-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        
+        .edit-button {
+            background: #ffc107;
+            color: #212529;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        .edit-button:hover {
+            background: #e0a800;
+        }
+        
+        .save-button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        .cancel-button {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .edit-textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 10px 0;
+            resize: vertical;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-grid,
+            .advantages-disadvantages {
+                grid-template-columns: 1fr;
+            }
+            
+            .company-selector {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="compare-container">
+        
+        <div class="compare-header">
+            <div class="header-section">
+                <button class="back-btn" onclick="goBack()">
+                    <i class="fas fa-arrow-left"></i> 返回主页
+                </button>
+                <h1>同行业比较分析</h1>
+            </div>
+            <p>对比分析不同企业的基本面数据，发现优势与劣势</p>
+        </div>
+        
+        <div class="company-input-section">
+            <div class="input-grid">
+                <div class="company-input-card">
+                    <h4>主要公司</h4>
+                    <input type="text" id="primaryCompanyName" placeholder="输入公司名称" class="company-name-input">
+                    <button class="edit-company-btn" onclick="editPrimaryCompany()">编辑信息</button>
+                </div>
+                <div class="company-input-card">
+                    <h4>对比公司</h4>
+                    <input type="text" id="compareCompanyName" placeholder="输入公司名称" class="company-name-input">
+                    <button class="edit-company-btn" onclick="editCompareCompany()">编辑信息</button>
+                </div>
+            </div>
+            <div class="action-center">
+                <button id="showComparisonBtn" class="show-comparison-btn">显示比较结果</button>
+            </div>
+        </div>
+        
+        <div id="comparisonResult" style="display: none;">
+            <div class="comparison-grid">
+                <div class="company-card" id="primaryCard">
+                    <div class="card-header">
+                        <h3 id="primaryName">主要公司</h3>
+                        <button class="edit-metrics-btn" onclick="editPrimaryMetrics()">编辑指标</button>
+                    </div>
+                    <div id="primaryMetrics" class="metrics-container">
+                        <div class="metric-item">
+                            <span class="metric-label">投资评分:</span>
+                            <input type="text" class="metric-input" id="primary_score" placeholder="输入评分">
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">投资建议:</span>
+                            <input type="text" class="metric-input" id="primary_advice" placeholder="输入建议">
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">风险等级:</span>
+                            <input type="text" class="metric-input" id="primary_risk" placeholder="输入风险等级">
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">主要业务:</span>
+                            <input type="text" class="metric-input" id="primary_business" placeholder="输入主要业务">
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">市值规模:</span>
+                            <input type="text" class="metric-input" id="primary_market_cap" placeholder="输入市值">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="company-card" id="compareCard">
+                    <div class="card-header">
+                        <h3 id="compareName">对比公司</h3>
+                        <button class="edit-metrics-btn" onclick="editCompareMetrics()">编辑指标</button>
+                    </div>
+                    <div id="compareMetrics" class="metrics-container">
+                        <div class="metric-item">
+                            <span class="metric-label">投资评分:</span>
+                            <input type="text" class="metric-input" id="compare_score" placeholder="输入评分">
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">投资建议:</span>
+                            <input type="text" class="metric-input" id="compare_advice" placeholder="输入建议">
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">风险等级:</span>
+                            <input type="text" class="metric-input" id="compare_risk" placeholder="输入风险等级">
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">主要业务:</span>
+                            <input type="text" class="metric-input" id="compare_business" placeholder="输入主要业务">
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">市值规模:</span>
+                            <input type="text" class="metric-input" id="compare_market_cap" placeholder="输入市值">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="advantages-disadvantages">
+                <div class="advantage-card">
+                    <h4>优势分析</h4>
+                    <ul class="point-list" id="advantagesList"></ul>
+                    <div class="edit-section">
+                        <button class="edit-button" onclick="editAdvantages()">编辑优势</button>
+                        <div id="advantagesEdit" style="display: none;">
+                            <textarea id="advantagesTextarea" class="edit-textarea" placeholder="每行一个优势点"></textarea>
+                            <button class="save-button" onclick="saveAdvantages()">保存</button>
+                            <button class="cancel-button" onclick="cancelEditAdvantages()">取消</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="disadvantage-card">
+                    <h4>劣势分析</h4>
+                    <ul class="point-list" id="disadvantagesList"></ul>
+                    <div class="edit-section">
+                        <button class="edit-button" onclick="editDisadvantages()">编辑劣势</button>
+                        <div id="disadvantagesEdit" style="display: none;">
+                            <textarea id="disadvantagesTextarea" class="edit-textarea" placeholder="每行一个劣势点"></textarea>
+                            <button class="save-button" onclick="saveDisadvantages()">保存</button>
+                            <button class="cancel-button" onclick="cancelEditDisadvantages()">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let compareData = {};
+        let currentComparison = null;
+        
+        // 页面加载时初始化
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadCompareData();
+            setupEventListeners();
+            
+            // 检查URL参数，如果有companyId则自动填入主要公司名称
+            const urlParams = new URLSearchParams(window.location.search);
+            const companyId = urlParams.get('companyId');
+            if (companyId) {
+                // 这里可以根据需要设置默认公司名称
+                document.getElementById('primaryCompanyName').value = '主要公司';
+            }
+        });
+        
+        // 加载比较数据
+        async function loadCompareData() {
+            try {
+                const response = await fetch('../data/compare.json');
+                if (response.ok) {
+                    compareData = await response.json();
+                } else {
+                    compareData = { comparisons: {} };
+                }
+            } catch (error) {
+                console.error('加载比较数据失败:', error);
+                compareData = { comparisons: {} };
+            }
+        }
+        
+        // 设置事件监听器
+        function setupEventListeners() {
+            document.getElementById('showComparisonBtn').addEventListener('click', showComparison);
+        }
+        
+        // 显示比较结果
+        function showComparison() {
+            const primaryName = document.getElementById('primaryCompanyName').value.trim();
+            const compareName = document.getElementById('compareCompanyName').value.trim();
+            
+            if (!primaryName || !compareName) {
+                alert('请输入两个公司名称');
+                return;
+            }
+            
+            if (primaryName === compareName) {
+                alert('请输入不同的公司名称');
+                return;
+            }
+            
+            // 更新显示的公司名称
+            document.getElementById('primaryName').textContent = primaryName;
+            document.getElementById('compareName').textContent = compareName;
+            
+            // 设置当前比较
+            currentComparison = { primary: primaryName, compare: compareName };
+            
+            // 加载已保存的数据
+            loadSavedData();
+            
+            // 显示比较结果区域
+            document.getElementById('comparisonResult').style.display = 'block';
+        }
+        
+        // 加载已保存的数据
+        function loadSavedData() {
+            const comparisonKey = `${currentComparison.primary}_vs_${currentComparison.compare}`;
+            const data = compareData.comparisons[comparisonKey] || { advantages: [], disadvantages: [], metrics: {} };
+            
+            // 加载指标数据
+            if (data.metrics) {
+                if (data.metrics.primary) {
+                    Object.keys(data.metrics.primary).forEach(key => {
+                        const input = document.getElementById(`primary_${key}`);
+                        if (input) input.value = data.metrics.primary[key] || '';
+                    });
+                }
+                if (data.metrics.compare) {
+                    Object.keys(data.metrics.compare).forEach(key => {
+                        const input = document.getElementById(`compare_${key}`);
+                        if (input) input.value = data.metrics.compare[key] || '';
+                    });
+                }
+            }
+            
+            // 加载优劣势数据
+            displayList('advantagesList', data.advantages);
+            displayList('disadvantagesList', data.disadvantages);
+        }
+        
+        // 编辑主要公司信息
+        function editPrimaryCompany() {
+            const name = document.getElementById('primaryCompanyName').value.trim();
+            if (!name) {
+                alert('请先输入公司名称');
+                return;
+            }
+            alert('公司信息编辑功能：您可以直接在下方的指标输入框中编辑数据');
+        }
+        
+        // 编辑对比公司信息
+        function editCompareCompany() {
+            const name = document.getElementById('compareCompanyName').value.trim();
+            if (!name) {
+                alert('请先输入公司名称');
+                return;
+            }
+            alert('公司信息编辑功能：您可以直接在下方的指标输入框中编辑数据');
+        }
+        
+        // 编辑主要公司指标
+        function editPrimaryMetrics() {
+            saveMetricsData();
+            alert('指标数据已保存！您可以继续编辑其他数据。');
+        }
+        
+        // 编辑对比公司指标
+        function editCompareMetrics() {
+            saveMetricsData();
+            alert('指标数据已保存！您可以继续编辑其他数据。');
+        }
+        
+        // 保存指标数据
+        async function saveMetricsData() {
+            if (!currentComparison) return;
+            
+            const comparisonKey = `${currentComparison.primary}_vs_${currentComparison.compare}`;
+            
+            if (!compareData.comparisons[comparisonKey]) {
+                compareData.comparisons[comparisonKey] = { advantages: [], disadvantages: [], metrics: {} };
+            }
+            
+            // 收集主要公司指标
+            const primaryMetrics = {
+                score: document.getElementById('primary_score').value,
+                advice: document.getElementById('primary_advice').value,
+                risk: document.getElementById('primary_risk').value,
+                business: document.getElementById('primary_business').value,
+                market_cap: document.getElementById('primary_market_cap').value
+            };
+            
+            // 收集对比公司指标
+            const compareMetrics = {
+                score: document.getElementById('compare_score').value,
+                advice: document.getElementById('compare_advice').value,
+                risk: document.getElementById('compare_risk').value,
+                business: document.getElementById('compare_business').value,
+                market_cap: document.getElementById('compare_market_cap').value
+            };
+            
+            compareData.comparisons[comparisonKey].metrics = {
+                primary: primaryMetrics,
+                compare: compareMetrics
+            };
+            
+            await saveComparisonData();
+        }
+        
+        // 显示列表
+        function displayList(containerId, items) {
+            const container = document.getElementById(containerId);
+            if (items && items.length > 0) {
+                container.innerHTML = items.map(item => `<li>${item}</li>`).join('');
+            } else {
+                container.innerHTML = '<li>暂无数据</li>';
+            }
+        }
+        
+        // 添加项目
+        function addItem(type) {
+            const inputId = type === 'advantage' ? 'advantageInput' : 'disadvantageInput';
+            const listId = type === 'advantage' ? 'advantagesList' : 'disadvantagesList';
+            
+            const input = document.getElementById(inputId);
+            const value = input.value.trim();
+            
+            if (!value) {
+                alert('请输入内容');
+                return;
+            }
+            
+            if (!currentComparison) {
+                alert('请先显示比较结果');
+                return;
+            }
+            
+            const comparisonKey = `${currentComparison.primary}_vs_${currentComparison.compare}`;
+            
+            if (!compareData.comparisons[comparisonKey]) {
+                compareData.comparisons[comparisonKey] = { advantages: [], disadvantages: [], metrics: {} };
+            }
+            
+            const targetArray = type === 'advantage' ? 
+                compareData.comparisons[comparisonKey].advantages : 
+                compareData.comparisons[comparisonKey].disadvantages;
+            
+            if (!targetArray.includes(value)) {
+                targetArray.push(value);
+                displayList(listId, targetArray);
+                input.value = '';
+                saveComparisonData();
+            } else {
+                alert('该项目已存在');
+            }
+        }
+        
+        // 移除项目
+        function removeItem(containerId, item) {
+            if (!currentComparison) return;
+            
+            const comparisonKey = `${currentComparison.primary}_vs_${currentComparison.compare}`;
+            const data = compareData.comparisons[comparisonKey];
+            
+            if (containerId === 'advantagesList') {
+                const index = data.advantages.indexOf(item);
+                if (index > -1) {
+                    data.advantages.splice(index, 1);
+                    displayList(containerId, data.advantages);
+                }
+            } else if (containerId === 'disadvantagesList') {
+                const index = data.disadvantages.indexOf(item);
+                if (index > -1) {
+                    data.disadvantages.splice(index, 1);
+                    displayList(containerId, data.disadvantages);
+                }
+            }
+            
+            saveComparisonData();
+        }
+        
+        // 编辑优势
+        function editAdvantages() {
+            const comparisonKey = `${currentComparison.primary}_vs_${currentComparison.compare}`;
+            const data = compareData.comparisons[comparisonKey] || { advantages: [], disadvantages: [] };
+            
+            document.getElementById('advantagesTextarea').value = data.advantages.join('\n');
+            document.getElementById('advantagesEdit').style.display = 'block';
+        }
+        
+        // 保存优势
+        async function saveAdvantages() {
+            const advantages = document.getElementById('advantagesTextarea').value
+                .split('\n')
+                .filter(item => item.trim())
+                .map(item => item.trim());
+            
+            await saveComparisonData('advantages', advantages);
+            displayList('advantagesList', advantages);
+            document.getElementById('advantagesEdit').style.display = 'none';
+        }
+        
+        // 取消编辑优势
+        function cancelEditAdvantages() {
+            document.getElementById('advantagesEdit').style.display = 'none';
+        }
+        
+        // 编辑劣势
+        function editDisadvantages() {
+            const comparisonKey = `${currentComparison.primary}_vs_${currentComparison.compare}`;
+            const data = compareData.comparisons[comparisonKey] || { advantages: [], disadvantages: [] };
+            
+            document.getElementById('disadvantagesTextarea').value = data.disadvantages.join('\n');
+            document.getElementById('disadvantagesEdit').style.display = 'block';
+        }
+        
+        // 保存劣势
+        async function saveDisadvantages() {
+            const disadvantages = document.getElementById('disadvantagesTextarea').value
+                .split('\n')
+                .filter(item => item.trim())
+                .map(item => item.trim());
+            
+            await saveComparisonData('disadvantages', disadvantages);
+            displayList('disadvantagesList', disadvantages);
+            document.getElementById('disadvantagesEdit').style.display = 'none';
+        }
+        
+        // 取消编辑劣势
+        function cancelEditDisadvantages() {
+            document.getElementById('disadvantagesEdit').style.display = 'none';
+        }
+        
+        // 保存比较数据
+        async function saveComparisonData(type, data) {
+            const comparisonKey = `${currentComparison.primary}_vs_${currentComparison.compare}`;
+            
+            if (!compareData.comparisons[comparisonKey]) {
+                compareData.comparisons[comparisonKey] = { advantages: [], disadvantages: [], metrics: {} };
+            }
+            
+            if (type && data) {
+                compareData.comparisons[comparisonKey][type] = data;
+            }
+            
+            try {
+                // 更新时间戳
+                compareData.lastUpdated = new Date().toISOString();
+                
+                const response = await fetch('/api/compare', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(compareData)
+                });
+                
+                if (!response.ok) {
+                    throw new Error('保存失败');
+                }
+                
+                console.log('比较数据已保存');
+            } catch (error) {
+                console.error('保存比较数据失败:', error);
+                // 静默处理错误，不打扰用户体验
+            }
+        }
+        
+        // 返回主页
+        function goBack() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "enterprise-fundamental-analysis",
+  "version": "1.0.0",
+  "description": "企业基本面调查系统 - 支持局域网访问",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "install-deps": "npm install express"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "keywords": [
+    "enterprise",
+    "analysis",
+    "investment",
+    "echarts"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
