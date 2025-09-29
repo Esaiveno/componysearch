@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "install-deps": "npm install express"
+    "build": "echo 'Build completed'",
+    "vercel-build": "echo 'Vercel build completed'",
+    "install-deps": "npm install"
   },
   "dependencies": {
     "express": "^4.18.2"
